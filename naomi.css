@@ -1,0 +1,302 @@
+.encabezado{ 
+background: #800000; 
+overflow: hidden;
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.logo{
+    float: left;
+    position: relative;
+    top: 15px;
+}
+.logo img{
+  width:120px;
+  height: auto;
+}
+.encabezado nav{ 
+float: right; 
+}
+.encabezado nav ul{ 
+margin: 0;
+padding: 0;
+list-style: none;
+}
+.encabezado nav ul li{ 
+display: inline-block;
+margin-right: -4px;
+}
+.encabezado nav ul li a{ 
+display: block;
+color: #fafbfd;
+padding: 28px;
+border-left: 1px solid #696969;
+text-decoration: none;
+}
+.encabezado nav ul li a:hover{ 
+background: #800000;
+}
+.titulo{
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.titulo span{
+  font-family: cursive;
+  font-size: 40px;
+}
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Ocultar los radio buttons */
+input[type="radio"] { display: none; }
+
+body {
+  background: #faf8f6;
+  font-family: 'DM Sans', Arial, sans-serif;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* ── Header ── */
+.encabezado {
+  background: #800000;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+.contenedor-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo { display: block; padding: 10px 0; }
+.logo img { width: 100px; height: auto; display: block; }
+
+.encabezado nav ul { list-style: none; display: flex; }
+.encabezado nav ul li a {
+  display: block;
+  color: #fafbfd;
+  padding: 26px 22px;
+  border-left: 1px solid rgba(255,255,255,0.15);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+.encabezado nav ul li a:hover { background: rgba(255,255,255,0.1); }
+
+.pagina {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 80px);
+}
+
+.seccion-imagen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.titulo {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.titulo span {
+  font-family: 'Playfair Display', cursive;
+  font-size: 34px;
+  font-style: italic;
+  color: #800000;
+}
+.imagen {
+  position: relative;
+  display: inline-block;
+}
+.imagen img {
+  width: 400px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.hotspot:hover { transform: scale(1.25); }
+
+.circulo {
+  width: 22px; height: 22px;
+  background: #800000;
+  border-radius: 50%;
+  border: 2px solid white;
+  top: 60px; left: 250px;
+  box-shadow: 0 2px 8px rgba(128,0,0,0.4);
+  animation: pulsar 2s infinite;
+}
+.triangulo {
+  width: 0; height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 22px solid #800000;
+  top: 200px; left: 120px;
+  filter: drop-shadow(0 2px 4px rgba(128,0,0,0.4));
+}
+.cuadrado {
+  width: 22px; height: 22px;
+  background: #800000;
+  border: 2px solid white;
+  border-radius: 4px;
+  top: 300px; left: 200px;
+  box-shadow: 0 2px 8px rgba(128,0,0,0.4);
+  animation: pulsar 2s infinite;
+}
+
+@keyframes pulsar {
+  0%   { box-shadow: 0 0 0 0px rgba(128,0,0,0.5); }
+  70%  { box-shadow: 0 0 0 10px rgba(128,0,0,0); }
+  100% { box-shadow: 0 0 0 0px rgba(128,0,0,0); }
+}
+
+
+.panel-producto {
+  width: 320px;
+  min-width: 320px;
+  background: white;
+  border-left: 1px solid #ede8e3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 28px;
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
+  min-height: calc(100vh - 80px);
+  box-shadow: -4px 0 20px rgba(0,0,0,0.05);
+}
+
+
+.panel-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #bbb;
+  text-align: center;
+}
+.icono-flecha {
+  font-size: 32px;
+  animation: oscilar 2s ease-in-out infinite;
+}
+@keyframes oscilar {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(-8px); }
+}
+.panel-placeholder p { font-size: 14px; line-height: 1.6; max-width: 200px; }
+
+
+.panel-info {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+#prod-bolsa:checked   ~ .pagina .panel-bolsa,
+#prod-lipgloss:checked ~ .pagina .panel-lipgloss,
+#prod-paleta:checked  ~ .pagina .panel-paleta {
+  display: flex;
+  animation: entrar 0.35s ease forwards;
+}
+
+#prod-bolsa:checked   ~ .pagina .panel-placeholder,
+#prod-lipgloss:checked ~ .pagina .panel-placeholder,
+#prod-paleta:checked  ~ .pagina .panel-placeholder {
+  display: none;
+}
+
+@keyframes entrar {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.cerrar-panel {
+  align-self: flex-end;
+  font-size: 18px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+  line-height: 1;
+  margin-bottom: -8px;
+}
+.cerrar-panel:hover { color: #800000; }
+
+.producto-badge {
+  display: inline-block;
+  background: #fff0f0;
+  color: #800000;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #f5c6c6;
+  width: fit-content;
+}
+.producto-nombre {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+.producto-precio {
+  font-size: 22px;
+  font-weight: 500;
+  color: #800000;
+}
+.producto-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  border-top: 1px solid #f0ebe5;
+  padding-top: 16px;
+}
+.producto-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  font-size: 11px;
+  background: #f5f0ee;
+  color: #555;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.btn-agregar {
+  margin-top: 8px;
+  background: #800000;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-agregar:hover { background: #600000; transform: translateY(-1px); }
+.btn-agregar:active { transform: translateY(0); }

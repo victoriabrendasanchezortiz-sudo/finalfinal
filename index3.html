@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Naomi</title>
+	<link rel="stylesheet" type="text/css" href="naomi.css">
+</head>
+<body>
+<header class="encabezado" role="banner">
+ 	<div class="contenedor">
+ 		<a href="#" class="logo">
+ 			<img src="logo.jpg" alt="logito">
+ 		</a>
+ 		<nav role ="navigation">
+ 			<ul>
+ 				<li><a href="#">Nosotros</a></li>
+ 				<li><a href="#">Servicio</a></li>
+ 				<li><a href="#">Contactanos</a></li>
+ 			</ul>
+ 		</nav>
+ 	</div>
+ </header>
+ 
+  <section class="seccion-imagen">
+    <h1 class="titulo">The Girls N' <span>Naomi</span> makeup menu</h1>
+ 
+    <div class="imagen">
+      <img src="naomi.jpg" alt="productos">
+ 
+      <div class="hotspot circulo" data-producto="bolsa">
+        <div class="pulso"></div>
+      </div>
+ 
+      <div class="hotspot triangulo" data-producto="lipgloss">
+        <div class="pulso"></div>
+      </div>
+ 
+      <div class="hotspot cuadrado" data-producto="paleta">
+  		<div class="pulso"></div>
+      </div>
+    </div>
+  </section>
+  <aside class="panel-producto" id="panelProducto">
+    <div class="panel-placeholder" id="panelPlaceholder">
+      <div class="icono-flecha">←</div>
+      <p>Pasa el cursor sobre un producto para ver los detalles</p>
+    </div>
+ 
+    <div class="panel-info" id="panelInfo">
+      <button class="cerrar-panel" id="cerrarPanel">✕</button>
+      <div class="producto-badge" id="productoBadge"></div>
+      <h2 class="producto-nombre" id="productoNombre"></h2>
+      <p class="producto-precio" id="productoPrecio"></p>
+      <p class="producto-desc" id="productoDesc"></p>
+      <div class="producto-tags" id="productoTags"></div>
+      <button class="btn-agregar">Agregar al carrito</button>
+    </div>
+  </aside>
+  <aside class="panel-producto">
+ 
+    <div class="panel-placeholder">
+      <div class="icono-flecha">&#8592;</div>
+      <p>Haz clic en un producto para ver los detalles</p>
+    </div>
+ 
+    <!-- Bolsa -->
+    <div class="panel-info panel-bolsa">
+      <label for="prod-ninguno" class="cerrar-panel">&#10005;</label>
+      <div class="producto-badge">&#10024; Nuevo</div>
+      <h2 class="producto-nombre">Bolsa Plateada</h2>
+      <p class="producto-precio">$450 MXN</p>
+      <p class="producto-desc">Bolsa de maquillaje con acabado metálico plateado. Perfecta para llevar todos tus productos favoritos de manera organizada y con mucho estilo.</p>
+      <div class="producto-tags">
+        <span class="tag">Accesorios</span>
+        <span class="tag">Edición limitada</span>
+        <span class="tag">Plateado</span>
+      </div>
+      <button class="btn-agregar">Agregar al carrito</button>
+    </div>
+ 
+    <!-- Lip Gloss -->
+    <div class="panel-info panel-lipgloss">
+      <label for="prod-ninguno" class="cerrar-panel">&#10005;</label>
+      <div class="producto-badge">&#128132; Top ventas</div>
+      <h2 class="producto-nombre">Lip Gloss</h2>
+      <p class="producto-precio">$120 MXN</p>
+      <p class="producto-desc">Lip gloss de larga duración con acabado brillante. Fórmula hidratante que cuida tus labios mientras los embellece con un tono natural y luminoso.</p>
+      <div class="producto-tags">
+        <span class="tag">Labios</span>
+        <span class="tag">Hidratante</span>
+        <span class="tag">Brillante</span>
+      </div>
+      <button class="btn-agregar">Agregar al carrito</button>
+    </div>
+ 
+    <!-- Paleta -->
+    <div class="panel-info panel-paleta">
+      <label for="prod-ninguno" class="cerrar-panel">&#10005;</label>
+      <div class="producto-badge">&#127912; Favorita</div>
+      <h2 class="producto-nombre">Paleta de Sombras</h2>
+      <p class="producto-precio">$300 MXN</p>
+      <p class="producto-desc">Paleta de 18 sombras con tonos neutros y vibrantes. Acabados mate, shimmer y glitter para crear looks de día o de noche con una sola paleta.</p>
+      <div class="producto-tags">
+        <span class="tag">Ojos</span>
+        <span class="tag">18 tonos</span>
+        <span class="tag">Versátil</span>
+      </div>
+      <button class="btn-agregar">Agregar al carrito</button>
+    </div>
+ 
+</aside>
+ 
+</main>
+</div>
+</body>
+</html>

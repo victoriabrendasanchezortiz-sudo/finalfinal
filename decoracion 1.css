@@ -1,0 +1,306 @@
+*{
+	margin: 	0;
+	padding: 	0;
+	box-sizing: border-box;
+	font-family:'Helvetica Neue', sans-serif;
+}
+.body{
+		background: #f7f4f2;
+		color: 	#222;
+}
+.encabezado{ 
+background: #800000; 
+overflow: hidden;
+}
+.logo{
+    float: left;
+   position: relative;
+    top: 15px; 
+}
+.logo img{
+  width: 120px;
+  height: auto;
+}
+.encabezado nav{ 
+float: right; 
+}
+.encabezado nav ul{ 
+margin: 0;
+padding: 0;
+list-style: none;
+}
+.encabezado nav ul li{ 
+display: inline-block;
+margin-right: -4px;
+}
+.encabezado nav ul li a{ 
+display: block;
+color: #fafbfd;
+padding: 28px;
+border-left: 1px solid #696969;
+text-decoration: none;
+}
+.encabezado nav ul li a:hover{ 
+background: #800000;
+}
+.hero{
+	position: 	relative;
+	height: 75vh;
+	display: flex;
+	align-items: center;
+}
+.products{
+	display: 	grid;
+	grid-template-columns: 	repeat(	auto-fit,minmax(220px, 1fr));
+	gap: 40px;
+	padding: 80px;
+	background: #ab2a3e;
+}
+.card{
+	background: rgba( 255, 255, 255, 0.3);
+	border-radius: 	24px;
+	padding: 	30px;
+	text-align: center;
+	transition: 	all 0.3s ease;
+	cursor: 	pointer	;
+	position: 	relative;
+}
+.card{
+	backdrop-filter: 	blur(	10px);
+	border: 1px solid rgba(	255,255,255, 0.4);	
+}
+.card img{
+	width: 	100%;
+	height: 180px;
+	object-fit: contain;
+	transition: transform 0.4s ease;
+}
+.card h3{
+	margin-top: 20px;
+	font-size: 	1.1rem;
+}
+.card span{
+	font-size: 	0.9rem;
+	opacity: 	0.7;
+}
+.card:hover{
+	transform: 	translateY(	-15px);
+	box-shadow: 	0 30px 60px rgba(0, 0, 0, 0.15);
+}
+.card:hover img{
+	transform: 	scale(1.05);
+}
+.about{
+	padding: 	120px 80px;
+	background: linear-gradient(180deg,#f6d6df,#f3f3f3 );
+	display: 	flex;
+	justify-content: 	center;
+}
+.about-text{
+	max-width: 	600px;
+	text-align: 	center;
+}
+.about h2{
+	font-size: 	4rems;
+	letter-spacing: 0.15em;
+	font-weight: 300;
+}
+.about p{
+	font-size: 	1.1rem;
+	line-height: 1.7;
+	opacity: 	0.75;
+}
+.bts{
+	background: rgba(	255,192,203, 0.3);
+		backdrop-filter: blur(10px);
+		border-radius: 999px;
+		border:1px solid rgba(255, 255, 255, 0.4);
+}
+
+.headline{
+	height: 80vh;
+	background-image: 	url(headliner.jpeg);
+	background-repeat: 	no-repeat;
+	background-size: cover;
+	background-position: center top;
+	background-color:#ededed ;
+	margin: 80px auto;
+	position: relative	;
+}
+.products.alt{
+  display: flex;
+  gap: 40px;
+  padding: 80px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+    background:
+  radial-gradient(circle at top left, rgba(123, 30, 58, 0.45), transparent 40%),
+  radial-gradient(circle at bottom right, rgba(90, 18, 40, 0.35), transparent 45%),
+  linear-gradient(135deg, #f5f5f5, #d9d9d9, #f0f0f0);
+
+}
+
+.video-section {
+  background: #1a0a0a;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-wrap {
+  position: relative;
+  display: inline-block;
+}
+.video-wrap video {
+  display: block;
+  width: 520px;
+  max-width: 90vw;
+  border-radius: 16px;
+  box-shadow: 0 0 60px rgba(171, 42, 62, 0.5), 0 20px 40px rgba(0,0,0,0.6);
+}
+.video-label {
+  position: absolute;
+  bottom: -18px;
+  right: 0;
+  background: #ab2a3e;
+  color: #fdf0f2;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 0 0 16px 0;
+}
+.suscripcion {
+  background: linear-gradient(160deg, #2a0a10, #1a0608);
+  padding: 100px 40px;
+  display: flex;
+  justify-content: center;
+}
+.sus-inner {
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+}
+.sus-eyebrow {
+  color: #e8889a;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.sus-titulo {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 200;
+  color: #fdf0f2;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+.sus-titulo em {
+  font-style: italic;
+  color: #e8889a;
+  font-weight: 400;
+}
+.sus-sub {
+  color: rgba(253, 240, 242, 0.5);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+.sus-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.sus-form input {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(232, 136, 154, 0.3);
+  border-radius: 10px;
+  padding: 16px 20px;
+  color: #fdf0f2;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.sus-form input::placeholder { color: rgba(253,240,242,0.35); }
+.sus-form input:focus { border-color: #e8889a; }
+.sus-form button {
+  background: #ab2a3e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 17px;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.sus-form button:hover { background: #c73352; transform: translateY(-2px); }
+.piedepagina {
+  background: #0f0305;
+  color: rgba(253,240,242,0.55);
+  padding: 0;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 40px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(232,136,154,0.15);
+}
+.footer-brand .footer-logo {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: #fdf0f2;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.footer-brand p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  opacity: 0.5;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.footer-nav a {
+  color: rgba(253,240,242,0.5);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.footer-nav a:hover { color: #e8889a; }
+.footer-social {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.footer-social a img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(30%);
+  border: 1px solid rgba(232,136,154,0.25);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.footer-social a:hover img {
+  border-color: #e8889a;
+  transform: scale(1.1);
+}
+.footer-bottom {
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  opacity: 0.3;
+}
